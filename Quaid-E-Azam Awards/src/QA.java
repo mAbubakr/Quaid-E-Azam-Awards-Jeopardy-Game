@@ -17,9 +17,6 @@ public class QA extends JFrame {
 	private JLabel lblQ = new JLabel("Who are the four caliphs of Islam?");
 
 
-	/**
-	 * Create the frame.
-	 */
 	public QA(final JFrame main) {
 		setTitle("Question");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
