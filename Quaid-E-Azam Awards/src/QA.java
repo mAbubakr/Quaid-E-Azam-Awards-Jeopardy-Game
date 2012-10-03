@@ -1,5 +1,5 @@
+import java.awt.Dimension;
 import java.awt.Toolkit;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -8,7 +8,6 @@ import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.Color;
-import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 
 
@@ -17,9 +16,6 @@ public class QA extends JFrame {
 	private JPanel contentPane;
 	private JLabel lblQ = new JLabel("Who are the four caliphs of Islam?");
 
-	/**
-	 * Launch the application.
-	 */
 
 	/**
 	 * Create the frame.
