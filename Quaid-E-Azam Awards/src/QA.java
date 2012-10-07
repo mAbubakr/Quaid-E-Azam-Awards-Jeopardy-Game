@@ -13,8 +13,13 @@ import javax.swing.SwingConstants;
 
 public class QA extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JLabel lblQ = new JLabel("Who are the four caliphs of Islam?");
+	private JLabel lblAnswer = new JLabel("Answer");
 
 
 	public QA(final JFrame main) {
@@ -31,6 +36,20 @@ public class QA extends JFrame {
 		lblQ.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
+				lblQ.setVisible(false);
+				lblAnswer.setVisible(true);
+				//main.setVisible(true);
+			}
+		});
+		
+		lblAnswer.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAnswer.setForeground(new Color(255, 255, 255));
+		lblAnswer.setVisible(false);
+		lblAnswer.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				lblAnswer.setVisible(false);
+				lblQ.setVisible(true);
 				setVisible(false);
 				main.setVisible(true);
 			}
@@ -50,10 +69,17 @@ public class QA extends JFrame {
 		lblQ.setFont(new Font("Tahoma", Font.BOLD, 36));
 		lblQ.setBounds(73, 35, 842, 286);
 		contentPane.add(lblQ);
+		
+		lblAnswer.setFont(new Font("Tahoma", Font.BOLD, 36));
+		lblAnswer.setBounds(73, 35, 842, 286);
+		contentPane.add(lblAnswer);
 	}
 
 	public void setLbl(String Q){
 		lblQ.setText(Q);
+	}
+	public void setAnswer(String s){
+		lblAnswer.setText(s);
 	}
 	public void setFont(int i){
 		lblQ.setFont(new Font("Tahoma", Font.BOLD, i));
